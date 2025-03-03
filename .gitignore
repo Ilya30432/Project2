@@ -1,0 +1,22 @@
+# Файлы IDE
+.vscode/
+
+# Логи
+*.log
+
+# Зависимости
+node_modules/
+
+# Сборки Webpack
+/dist/
+/build/
+
+# Файлы для ОС
+.DS_Store   # Для macOS
+Thumbs.db   # Для Windows
+
+# Файлы, связанные с компиляцией SCSS
+.sass-cache/
+
+# Конфиденциальные файлы
+.env
