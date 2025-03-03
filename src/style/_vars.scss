@@ -1,3 +1,6 @@
+$gradient-color:linear-gradient(225deg, #00b9b6 0%, #00cdac 100%);
+$text-weight: 700 ;
+$text-color: rgba(0, 185, 182, 1);
 // !breakpoints
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
@@ -21,4 +24,10 @@ $breakpoint-xxl: 1920px;
 	@media (min-width: $breakpoint-xxl) {
 		@content;
 	}
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
