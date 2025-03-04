@@ -4,6 +4,7 @@ $text-color: rgba(0, 185, 182, 1);
 // !breakpoints
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
 $breakpoint-xxl: 1920px;
 
 // !MIXINS
@@ -16,6 +17,12 @@ $breakpoint-xxl: 1920px;
 
 @mixin vieport-lg {
 	@media (min-width: $breakpoint-lg) {
+		@content;
+	}
+}
+
+@mixin vieport-xl {
+	@media (min-width: $breakpoint-xl) {
 		@content;
 	}
 }

@@ -5,11 +5,26 @@
   align-items: center;
   gap: 15px;
   padding: 20px 0;
+  @include vieport-lg {
+    justify-content: start;
+  }
+  @include vieport-xxl{
+    justify-content: center;
+    gap: 315px;
+  }
 }
 
 .header__img {
-  width: 85px;
+  width: 90px;
   height: 20px;
+  @include vieport-md {
+    margin-right: auto;
+  }
+  @include vieport-lg {
+    width: 180px;
+    height: 35px;
+    margin: 0;
+  }
 }
 
 .nav {
@@ -22,6 +37,17 @@
   border-radius: 10px;
   padding: 7px;
   transition: bottom 0.3s;
+  @include vieport-lg {
+    position: static;
+    z-index: 0;
+    background: none;
+    padding: 0;
+    transition: none;
+    margin: 0 auto;
+  }
+  @include vieport-xxl{
+    margin: 0;
+  }
   &__box {
     display: flex;
     align-items: center;
@@ -29,41 +55,71 @@
     gap: 45px;
     position: relative;
     padding-bottom: 130px;
-  } 
-  &__link{
+    @include vieport-lg {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+  &__link {
     width: 100%;
+    @include vieport-lg {
+      width: auto;
+    }
   }
   &__link:first-of-type {
     margin-top: 50px;
+    @include vieport-lg {
+      margin: 0;
+    }
   }
-  &__link-item{
+  &__link-item {
     display: block;
     font-size: 25px;
     padding: 5px;
     border-radius: 5px;
-    text-decoration:none ;
+    text-decoration: none;
     text-align: center;
     background-color: #f4f4f4;
     color: #006ed4;
-    font-weight: $text-weight ;
+    font-weight: $text-weight;
+    @include vieport-lg {
+      font-size: 18px;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      color: rgba(51, 51, 51, 1);
+      font-weight: 500;
+    }
   }
 }
-.active{
-    bottom: 0;
+.active {
+  bottom: 0;
 }
-
 
 .head__box {
   order: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include vieport-lg {
+    order: 0;
+  }
+  > img {
+    @include vieport-lg {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .head__box-lang {
   display: none;
 }
 
-.btn{
+.btn {
+  cursor: pointer;
   font-weight: 600;
-  background: $gradient-color ;
+  background: $gradient-color;
   box-shadow: 0px 15px 30px 0px rgba(220, 232, 243, 0.25);
 }
 
@@ -73,9 +129,21 @@
   width: 120px;
   height: 30px;
   font-size: 12px;
+  @include vieport-md {
+    width: 140px;
+  }
+  @include vieport-lg {
+    width: 110px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 .burger__box {
   order: 2;
+  @include vieport-lg {
+    display: none;
+  }
 }
 
 .burger__open {
@@ -83,37 +151,73 @@
 }
 
 .burger__close {
-    position: absolute;
+  position: absolute;
   right: 0;
   cursor: pointer;
+  @include vieport-lg {
+    display: none;
+  }
 }
 
 // Баннер
 
-.banner{
+.banner {
   @include flex-column;
-  &__box{
+  @include vieport-md {
+    flex-direction: row;
+  }
+  @include vieport-lg {
+    justify-content: center;
+  }
+  &__box {
     @include flex-column;
     gap: 5px;
+    @include vieport-md {
+      align-items: start;
+    }
   }
-  &__text{
+  &__text {
     color: $text-color;
+    @include vieport-xxl{
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
-  &__title{
+  &__title {
     font-weight: $text-weight;
     font-size: 26px;
     text-align: center;
     line-height: 33px;
+    @include vieport-md {
+      text-align: start;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @include vieport-lg {
+      font-size: 48px;
+      line-height: 57px;
+    }
   }
-  &__btn{
+  &__btn {
     color: white;
     width: 195px;
     height: 45px;
     border-radius: 12px;
     margin-top: 20px;
   }
-  &__img{
+  &__img {
     text-align: center;
     margin-top: 30px;
   }
+  &__img > img {
+    @include vieport-lg {
+      display: block;
+      width: 410px;
+      height: 275px;
+    }
+    @include vieport-xxl{
+      width: 620px;
+      height: 400px;
+    }
   }
+}
