@@ -149,35 +149,84 @@
     text-align: center;
     font-size: 24px;
     line-height: 28px;
+    @include vieport-md {
+      font-size: 28px;
+    }
+    @include vieport-lg {
+      font-size: 32px;
+    }
   }
   &__box {
     padding-top: 20px;
     padding-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include vieport-md {
+      max-width: 630px;
+      margin: 0 auto;
+    }
+    @include vieport-lg {
+      max-width: 865px;
+    }
+    @include vieport-xl {
+      max-width: 1010px;
+    }
   }
-  &__box-text{
+  &__box-text {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
     font-size: 14px;
     line-height: 16px;
     border-radius: 12px;
     padding: 10px 30px;
+    @include vieport-md {
+      font-size: 16px;
+    }
+    @include vieport-lg {
+      font-size: 18px;
+    }
   }
-  &__box-text:hover{
+  &__box-text:hover {
     color: $text-color;
     box-shadow: 0px 4px 25px 0px rgba(0, 185, 182, 0.25);
   }
-  &__box-text:last-of-type{
-    background: $gradient-color;
-    font-weight: $text-weight;
-    color: rgba(255, 255, 255, 1);
-  }
 }
 
-.text-two{
-  grid-column: span 2;
+.text-last {
+  background: $gradient-color;
+  font-weight: $text-weight;
+  color: rgba(255, 255, 255, 1);
+}
+
+// Swiper
+
+.my-swiper.my-swiper{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.teach {
+  &__box{
+    border-radius: 12px;
+    padding: 15px 15px 40px 15px;
+    gap: 30px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  &__foto{
+      width: 255px;
+      height: 230px;
+  }
+  &__text{
+    text-align: start;
+    margin-top: 20px;
+  }
+  &__arrow{
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+  }
 }
