@@ -8,9 +8,9 @@
   @include vieport-lg {
     justify-content: start;
   }
-  @include vieport-xxl{
+  @include vieport-xxl {
     justify-content: center;
-    gap: 315px;
+    gap: 335px;
   }
 }
 
@@ -45,7 +45,7 @@
     transition: none;
     margin: 0 auto;
   }
-  @include vieport-xxl{
+  @include vieport-xxl {
     margin: 0;
   }
   &__box {
@@ -178,7 +178,7 @@
   }
   &__text {
     color: $text-color;
-    @include vieport-xxl{
+    @include vieport-xxl {
       font-size: 18px;
       line-height: 25px;
     }
@@ -215,7 +215,11 @@
       width: 410px;
       height: 275px;
     }
-    @include vieport-xxl{
+    @include vieport-xl {
+      width: 510px;
+      height: 300px;
+    }
+    @include vieport-xxl {
       width: 620px;
       height: 400px;
     }

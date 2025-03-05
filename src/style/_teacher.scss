@@ -11,7 +11,7 @@
     gap: 50px;
     justify-content: center;
   }
-  @include vieport-xxl{
+  @include vieport-xxl {
     gap: 90px;
   }
   &__img {
@@ -26,6 +26,10 @@
     @include vieport-lg {
       width: 530px;
       height: 295px;
+    }
+    @include vieport-xl {
+      width: 575px;
+      height: 300px;
     }
     @include vieport-xxl {
       width: 615px;
@@ -134,4 +138,46 @@
     border-radius: 8px;
     cursor: pointer;
   }
+}
+
+// Секция с темами
+
+.theme {
+  padding-top: 30px;
+  &__title {
+    font-weight: $text-weight;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &__box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+  &__box-text{
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 12px;
+    padding: 10px 30px;
+  }
+  &__box-text:hover{
+    color: $text-color;
+    box-shadow: 0px 4px 25px 0px rgba(0, 185, 182, 0.25);
+  }
+  &__box-text:last-of-type{
+    background: $gradient-color;
+    font-weight: $text-weight;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.text-two{
+  grid-column: span 2;
 }
