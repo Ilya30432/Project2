@@ -202,31 +202,62 @@
 
 // Swiper
 
-.my-swiper.my-swiper{
+.my-swiper.my-swiper {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .teach {
-  &__box{
+  &__box {
     border-radius: 12px;
-    padding: 15px 15px 40px 15px;
-    gap: 30px;
+    padding: 15px 15px 30px 15px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
     text-align: center;
+    @include vieport-md{
+      padding: 10px 10px 30px 10px;
+    }
   }
-  &__foto{
-      width: 255px;
-      height: 230px;
+  &__foto {
+    width: 255px;
+    height: 230px;
+    @include vieport-md{
+      width: 127px;
+      height: 127px;
+    }
+    @include vieport-lg{
+      width: 142px;
+      height: 142px;
+    }
+    @include vieport-xl{
+      width: 158px;
+      height: 158px;
+    }
+    @include vieport-xxl{
+      width: 178px;
+      height: 178px;
+    }
   }
-  &__text{
+  &__text {
     text-align: start;
     margin-top: 20px;
+    @include vieport-md{
+      font-weight: $text-weight;
+    }
+    @include vieport-xl{
+      font-size: 18px;
+    }
   }
-  &__arrow{
-  display: block;
-  margin-left: auto;
-  margin-top: 20px;
+  &__img-box {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
   }
+}
+
+.swiper-pagination > span{
+  background:rgba(0, 185, 182, 1);
+  width: 25px;
+  height: 5px;
+  border-radius: 6px;
 }
