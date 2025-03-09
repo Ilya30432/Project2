@@ -5,11 +5,31 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding-top: 30px;
+  @include vieport-md {
+    flex-direction: row;
+    padding-top: 50px;
+  }
+  @include vieport-lg{
+    justify-content: space-between;
+    align-items: start;
+  }
   &__title {
     font-weight: $text-weight;
     text-align: center;
     font-size: 24px;
-    padding: 20px 0;
+    padding-bottom: 20px;
+    @include vieport-md {
+      text-align: start;
+      font-size: 28px;
+    }
+    @include vieport-lg{
+    font-size: 32px;
+    padding-bottom: 40px;
+    }
+    @include vieport-xxl{
+      font-size: 36px;
+    }
   }
   &__info-span {
     display: inline-block;
@@ -36,6 +56,27 @@
     padding-top: 3px;
     color: rgba(51, 51, 51, 1);
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    @include vieport-lg{
+      font-size: 18px;
+      padding-top: 0;
+      line-height: 140%;
+    }
+  }
+  &__img > img {
+    width: 330px;
+    height: 298px;
+    @include vieport-lg{
+      width: 360px;
+      height: 325px;
+    }
+    @include vieport-xl{
+      width: 400px;
+      height: 360px;
+    }
+    @include vieport-xxl{
+      width: 436px;
+      height: 395px;
+    }
   }
 }
