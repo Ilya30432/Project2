@@ -6,6 +6,7 @@
   align-items: center;
   gap: 15px;
   padding-top: 30px;
+  padding-bottom: 130px;
   @include vieport-md {
     flex-direction: row;
     padding-top: 50px;
