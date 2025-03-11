@@ -1,27 +1,74 @@
 @use "./vars" as *;
 
-.section__benefits{
-    position: relative;
-}
-.section__benefits::before{
-    content: "";
-    position: absolute;
-    background: rgba(0, 185, 182, 0.1);
-    width: 100%;
-    height: 100%;
-    right: -2px;
+.benefits__bg-color {
+  background: rgba(0, 185, 182, 0.1);
 }
 
 .benefits {
-    position: relative;
+  position: relative;
+  border-radius: 24px;
+  @include vieport-md {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 220px;
+  }
+  @include vieport-lg {
+    padding-left: 280px;
+  }
+  @include vieport-xl {
+    padding-left: 310px;
+  }
   &__img {
     position: absolute;
     top: -65px;
     left: 50%;
     transform: translateX(-50%);
+    @include vieport-md {
+      left: 40px;
+      transform: none;
+    }
+    @include vieport-lg {
+      left: 50px;
+    }
+    @include vieport-xl {
+      left: 80px;
+    }
   }
-  &__cont{
+  &__img > img {
+    @include vieport-md {
+      width: 176px;
+      height: 352px;
+    }
+    @include vieport-lg {
+      width: 211px;
+      height: 423px;
+    }
+    @include vieport-xl {
+      width: 240px;
+      height: 485px;
+    }
+    @include vieport-xxl {
+      width: 270px;
+      height: 540px;
+    }
+  }
+  &__cont {
     padding-top: 260px;
+    @include vieport-md {
+      padding: 0;
+      max-width: 410px;
+      padding-bottom: 50px;
+    }
+    @include vieport-lg {
+      max-width: 565px;
+    }
+    @include vieport-xl {
+      max-width: 620px;
+      padding-bottom: 80px;
+    }
+    @include vieport-xxl{
+      padding-bottom: 120px;
+    }
   }
   &__title {
     font-weight: $text-weight;
@@ -29,12 +76,29 @@
     line-height: 120%;
     text-align: center;
     padding-top: 30px;
+    @include vieport-md {
+      font-size: 28px;
+      text-align: start;
+      padding-top: 50px;
+    }
+    @include vieport-lg {
+      font-size: 32px;
+    }
+    @include vieport-xl {
+      font-size: 34px;
+    }
+    @include vieport-xxl {
+      font-size: 36px;
+    }
   }
   &__box {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include vieport-md {
+      gap: 20px;
+    }
   }
   &__list {
     position: relative;
@@ -57,11 +121,16 @@
     line-height: 120%;
     margin-bottom: 5px;
     color: rgba(14, 14, 15, 1);
-
+    @include vieport-lg {
+      font-size: 20px;
+    }
   }
   &__list-text {
     font-size: 16px;
     line-height: 140%;
     color: rgba(14, 14, 15, 1);
+    @include vieport-lg {
+      font-size: 16px;
+    }
   }
 }
