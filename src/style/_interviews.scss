@@ -1,0 +1,85 @@
+@use "./vars" as *;
+
+.interviews {
+  // .interviews__cont
+  padding-top: 80px;
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  // .interviews__preview
+
+  &__preview {
+  }
+
+  // .interviews__preview-title
+
+  &__preview-title {
+    font-weight: $text-weight;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  // .interviews__preview-text
+
+  &__preview-text {
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: $text-color;
+  }
+
+  // .interviews__box
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  // .interviews__box-list
+
+  &__box-list {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  // .interviews__box-title
+
+  &__box-title {
+    font-weight: $text-weight;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(14, 14, 15, 1);
+    margin-bottom: 10px;
+  }
+
+  // .interviews__box-num
+
+  &__box-num {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-weight: $text-weight;
+    font-size: 100px;
+    color: $text-color;
+    opacity: 0.1;
+  }
+
+  // .interviews__box-text
+
+  &__box-text {
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(51, 51, 51, 1);
+  }
+
+  // .interviews__img
+
+  &__img {
+  }
+}
