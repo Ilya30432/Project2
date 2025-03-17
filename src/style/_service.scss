@@ -7,6 +7,16 @@
   padding-top: 80px;
   gap: 35px;
   padding-bottom: 50px;
+  @include vieport-md {
+    align-items: normal;
+  }
+  @include vieport-lg {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include vieport-xl {
+    gap: 40px;
+  }
   // .service__title
 
   &__title {
@@ -14,6 +24,21 @@
     font-size: 24px;
     line-height: 120%;
     color: rgba(14, 14, 15, 1);
+    @include vieport-md {
+      font-size: 32px;
+      align-self: center;
+    }
+    @include vieport-lg {
+      flex: 1 1 100%;
+      order: 1;
+      text-align: center;
+    }
+    @include vieport-xl {
+      font-size: 34px;
+    }
+    @include vieport-xxl {
+      font-size: 36px;
+    }
   }
 
   // .service__info
@@ -21,12 +46,28 @@
   &__info {
     display: flex;
     gap: 20px;
+    @include vieport-md {
+      justify-content: space-between;
+      gap: 0;
+    }
+    @include vieport-lg {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      order: 3;
+    }
+    @include vieport-xl {
+      padding-left: 40px;
+    }
   }
 
   // .service__info-list
 
   &__info-list {
     text-align: center;
+    @include vieport-lg {
+      text-align: start;
+    }
   }
 
   // .service__info-title
@@ -36,6 +77,15 @@
     font-size: 20px;
     line-height: 120%;
     color: rgba(255, 168, 0, 1);
+    @include vieport-md {
+      font-size: 42px;
+    }
+    @include vieport-xl {
+      font-size: 46px;
+    }
+    @include vieport-xxl {
+      font-size: 48px;
+    }
   }
 
   // .service__info-text
@@ -43,11 +93,39 @@
   &__info-text {
     font-size: 14px;
     line-height: 140%;
+    @include vieport-md {
+      font-size: 16px;
+    }
+    @include vieport-xl {
+      font-size: 18px;
+    }
   }
 
   // .service__img
 
   &__img {
+    align-self: center;
+    @include vieport-lg {
+      order: 2;
+    }
+  }
+  &__img > img {
+    @include vieport-md {
+      height: 380px;
+      width: 688px;
+    }
+    @include vieport-lg {
+      height: 330px;
+      width: 590px;
+    }
+    @include vieport-xl {
+      height: 400px;
+      width: 700px;
+    }
+    @include vieport-xxl {
+      height: 430px;
+      width: 760px;
+    }
   }
 
   // .service__time
@@ -56,6 +134,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include vieport-md {
+      flex-direction: row;
+    }
+    @include vieport-lg {
+      order: 4;
+    }
   }
 
   // .service__time-box
@@ -69,12 +153,22 @@
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
     border-radius: 24px;
     padding: 15px 10px;
+    @include vieport-md {
+      padding: 15px;
+    }
+    @include vieport-lg {
+      padding: 20px;
+    }
   }
 
   // .service__time-img
 
   &__time-img {
     grid-row: 1 / 3;
+    @include vieport-lg {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   // .service__time-title
@@ -84,6 +178,9 @@
     font-size: 18px;
     font-weight: $text-weight;
     line-height: 120%;
+    @include vieport-lg {
+      font-size: 20px;
+    }
   }
 
   // .service__time-text
@@ -91,5 +188,8 @@
   &__time-text {
     font-size: 16px;
     line-height: 140%;
+    @include vieport-lg {
+      font-size: 18px;
+    }
   }
 }
