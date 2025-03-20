@@ -4,12 +4,12 @@
   infoLiNum.forEach((elem, index) => {
     elem.addEventListener("click", () => {
       infoLi.forEach((content) => {
-        content.classList.remove("active");
+        content.classList.remove("active__text");
       });
       infoLiNum.forEach((tab) => {
         tab.classList.remove("active__btn");
       });
       infoLiNum[index].classList.add("active__btn");
-      infoLi[index].classList.add("active");
+      infoLi[index].classList.add("active__text");
     });
   });
