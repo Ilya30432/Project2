@@ -8,6 +8,12 @@
     font-weight: $text-weight;
     line-height: 120%;
     color: #0e0e0f;
+    @include vieport-md {
+      font-size: 28px;
+    }
+    @include vieport-lg {
+      font-size: 36px;
+    }
   }
 
   // .offerings__box
@@ -17,6 +23,11 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include vieport-md {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   // .offerings__time
@@ -29,6 +40,12 @@
     padding: 20px;
     position: relative;
     gap: 30px;
+    @include vieport-lg {
+      padding: 30px;
+    }
+    @include vieport-xl {
+      flex: 1 1 70%;
+    }
   }
   // .offerings__time-text
 
@@ -43,6 +60,11 @@
     padding: 5px 16px;
     border-top-right-radius: 23px;
     border-bottom-left-radius: 12px;
+    @include vieport-lg {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px 16px 10px 16px;
+    }
   }
 
   &__time-cont {
@@ -67,6 +89,9 @@
     display: flex;
     gap: 5px;
     align-items: end;
+    @include vieport-lg {
+      font-size: 56px;
+    }
   }
 
   // .offerings__span-one
@@ -83,6 +108,9 @@
     font-size: 18px;
     line-height: 140%;
     font-weight: 400;
+    @include vieport-lg {
+      font-size: 24px;
+    }
   }
 
   // .offerings__time-item
@@ -130,6 +158,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include vieport-lg {
+      flex-direction: row;
+    }
   }
 
   // .offerings__time-info
@@ -141,6 +172,9 @@
     justify-content: space-between;
     border-radius: 12px;
     align-items: center;
+    @include vieport-lg {
+      flex: 1 1 70%;
+    }
   }
 
   // .offerings__time-arrow
@@ -194,6 +228,12 @@
     color: #00b9b6;
     box-shadow: 0px 15px 30px 0px #dce8f340;
     border-radius: 12px;
+    @include vieport-lg {
+      flex: 1 1 25%;
+    }
+    @include vieport-xl {
+      font-weight: $text-weight;
+    }
   }
 
   // .offerings__info
@@ -205,6 +245,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include vieport-lg {
+      padding: 30px;
+    }
+    @include vieport-xl {
+      flex: 1 1 40%;
+    }
   }
 
   // .offerings__info-title
@@ -223,20 +269,26 @@
     display: flex;
     gap: 5px;
     align-items: end;
+    @include vieport-lg {
+      font-size: 56px;
+    }
   }
 
-  &__info-one{
+  &__info-one {
     font-size: 24px;
     color: #333333;
     line-height: 140%;
     font-weight: 400;
   }
 
-  &__info-two{
+  &__info-two {
     font-weight: 400;
     color: #333333;
     font-size: 18px;
     line-height: 140%;
+    @include vieport-lg {
+      font-size: 24px;
+    }
   }
 
   &__info-item {
@@ -252,6 +304,9 @@
     color: #333333;
     font-size: 16px;
     line-height: 140%;
+    @include vieport-lg {
+      font-size: 18px;
+    }
   }
 
   // .offerings__info-span
@@ -265,9 +320,9 @@
     border-radius: 50%;
     top: 0;
     left: 0;
-}
+  }
 
-&__info-span::before{
+  &__info-span::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -278,7 +333,7 @@
     border-left: 2px solid rgb(0, 185, 182);
     border-bottom: 2px solid rgb(0, 185, 182);
     transform: translate(-50%, -50%) rotate(-45deg);
-}
+  }
 
   // .offerings__info-btn
 
@@ -289,7 +344,35 @@
     line-height: 120%;
     background: #ffffff;
     color: #00b9b6;
-    box-shadow: 0px 15px 30px 0px #DCE8F340;
+    box-shadow: 0px 15px 30px 0px #dce8f340;
     border-radius: 12px;
+    @include vieport-lg {
+      padding: 12px 30px;
+      align-self: flex-start;
+    }
+    @include vieport-xl {
+      font-weight: $text-weight;
+    }
   }
+}
+
+.left {
+  background: none;
+  cursor: pointer;
+}
+.left:disabled {
+  opacity: 0.5; /* Затемнение */
+  cursor: not-allowed; /* Убираем возможность клика */
+  pointer-events: none; /* Отключаем события */
+}
+
+.right {
+  background: none;
+  cursor: pointer;
+}
+
+.right:disabled {
+  opacity: 0.5; /* Затемнение */
+  cursor: not-allowed; /* Убираем возможность клика */
+  pointer-events: none; /* Отключаем события */
 }
