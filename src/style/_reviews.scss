@@ -1,0 +1,46 @@
+@use "./vars" as *;
+
+.reviews {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  &__title{
+    font-size: 26px;
+    line-height: 120%;
+    font-weight:$text-weight ;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  &__wrapper {
+    padding-bottom: 40px;
+  }
+  .reviews__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-radius: 24px;
+  }
+  &__cont {
+    display: flex;
+    flex-direction: column;
+  }
+  &__stars {
+    margin-bottom: 10px;
+  }
+  &__person {
+    line-height: 140%;
+    color: rgba(51, 51, 51, 1);
+  }
+  &__profession {
+    font-weight: $text-weight;
+    line-height: 140%;
+    color: rgba(51, 51, 51, 1);
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(51, 51, 51, 1);
+  }
+}

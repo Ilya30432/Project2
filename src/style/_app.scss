@@ -1,0 +1,35 @@
+@use "./vars" as *;
+
+.app__two {
+  @include vieport-md {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+}
+
+.app__img-two {
+  display: flex;
+  justify-content: center;
+  @include vieport-xl {
+    flex: 1 1 70%;
+    justify-content: end;
+  }
+}
+
+.app__img-phone {
+  @include vieport-lg {
+    width: 380px;
+    height: 415px;
+  }
+  @include vieport-xl {
+    width: 420px;
+    height: 450px;
+  }
+  @include vieport-xxl {
+    width: 455px;
+    height: 497px;
+  }
+}
