@@ -1,14 +1,20 @@
 @use "./vars" as *;
 
 .reviews {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  &__title{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include vieport-md{
+    padding-top: 60px;
+  }
+  &__title {
     font-size: 26px;
     line-height: 120%;
-    font-weight:$text-weight ;
+    font-weight: $text-weight;
     padding-bottom: 25px;
     text-align: center;
+    @include vieport-md{
+      text-align: start;
+    }
   }
   &__wrapper {
     padding-bottom: 40px;
@@ -21,6 +27,19 @@
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
     background: #ffffff;
     border-radius: 24px;
+    @include vieport-lg {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 30px;
+    }
+  }
+  &__img {
+    @include vieport-lg {
+      width: 100px;
+      height: 100px;
+      grid-row: 1 / 3;
+      align-self: start;
+    }
   }
   &__cont {
     display: flex;
@@ -28,6 +47,13 @@
   }
   &__stars {
     margin-bottom: 10px;
+    @include vieport-lg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 30px;
+      padding-right: 30px;
+    }
   }
   &__person {
     line-height: 140%;
@@ -42,5 +68,12 @@
     font-size: 14px;
     line-height: 140%;
     color: rgba(51, 51, 51, 1);
+    @include vieport-lg {
+      font-size: 16px;
+    }
   }
+}
+
+.blurred{
+  opacity: .3;
 }
