@@ -8,8 +8,6 @@
 node_modules/
 
 # Сборки Webpack
-/dist/
-/build/
 
 # Файлы для ОС
 .DS_Store   # Для macOS

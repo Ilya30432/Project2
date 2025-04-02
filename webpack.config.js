@@ -23,6 +23,7 @@ module.exports = {
     clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
+    publicPath: '/',  // Важно для корректной работы на GitHub Pages
   },
   plugins: [
     new HtmlWebpackPlugin({
