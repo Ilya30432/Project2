@@ -1,0 +1,101 @@
+@use "./vars" as *;
+
+.psychologist {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @include vieport-lg{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .psychologist__title
+
+  &__title {
+    font-weight: $text-weight;
+    font-size: 22px;
+    line-height: 120%;
+    color: #0e0e0f;
+    text-align: center;
+    @include vieport-md {
+      font-size: 32px;
+      text-align: start;
+    }
+    @include vieport-lg{
+        flex: 1 1 100%;
+        padding-bottom: 10px;
+    }
+  }
+
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include vieport-lg{
+        flex: 1 1 45%;
+    }
+  }
+
+  // .psychologist__box
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  // .psychologist__box-title
+
+  &__box-title {
+    font-weight: $text-weight;
+    font-size: 18px;
+    line-height: 120%;
+    color: #0e0e0f;
+    @include vieport-md {
+      font-size: 20px;
+    }
+  }
+
+  // .psychologist__box-text
+
+  &__box-text {
+    font-size: 14px;
+    color: #333333;
+    line-height: 150%;
+    @include vieport-md {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  // .psychologist__box-item
+
+  &__box-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  // .psychologist__box-list
+
+  &__box-list {
+    font-size: 14px;
+    color: #333333;
+    line-height: 140%;
+    padding-left: 15px;
+    position: relative;
+  }
+  &__box-list::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #333333;
+    top: 6px;
+    left: 0;
+    border-radius: 50%;
+  }
+}

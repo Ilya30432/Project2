@@ -1,0 +1,101 @@
+@use "./vars" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+  @include vieport-md{
+    padding-top: 30px;
+  }
+  @include vieport-lg{
+    flex-direction: row;
+    gap: 90px;
+    padding-top: 40px;
+  }
+  @include vieport-xl{
+  gap: 180px;
+  }
+  // .footer__cont
+
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include vieport-md{
+        gap: 30px;
+    }
+  }
+
+  // .footer__cont-img
+
+  &__cont-img {
+    @include vieport-md{
+        width: 183px;
+        height: 36px;
+    }
+  }
+
+  // .footer__cont-item
+
+  &__cont-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include vieport-md {
+        max-width: 400px;
+    }
+  }
+
+  // .footer__cont-list
+
+  &__cont-list {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 40px;
+    line-height: 120%;
+    color: #333333;
+    @include vieport-md{
+        padding-right: 0;
+    }
+  }
+
+  // .footer__cont-social
+
+  &__cont-social {
+    display: flex;
+    gap: 25px;
+  }
+
+  // .footer__cont-info
+
+  &__cont-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__cont-connection {
+    display: flex;
+    gap: 12px;
+  }
+
+  // .footer__cont-mail
+
+  &__cont-mail {
+  }
+
+  // .footer__img-mail
+
+  &__cont-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: #333333;
+  }
+
+  // .footer__cont-pin
+
+  &__cont-pin {
+  }
+}
